@@ -1,7 +1,7 @@
 FROM       ubuntu:16.04
 MAINTAINER Aleksandar Diklic "https://github.com/rastasheep"
 
-RUN apt-get update
+RUN apt-get update && apt-get install -y --no-install-recommends apt-utils
 
 RUN apt-get install -y openssh-server
 RUN mkdir /var/run/sshd
